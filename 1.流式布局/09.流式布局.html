@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 流式布局，也即百分比布局，将盒子的宽高设置为百分比来进行伸缩。
+        注意：百分比主要针对的是宽度，高度一般还是使用像素。
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        width: 100%;
+        /* 设置最大和最小的缩放宽度,当到达这个宽度时，该盒子将不再按照百分比进行伸缩变换，会保持这个宽度不变 */
+        max-width: 900px;
+        min-width: 600px;
+        margin: 0 auto;
+      }
+      section div:nth-child(1) {
+        float: left;
+        height: 50px;
+        width: 40%;
+        background-color: orange;
+      }
+      section div:nth-child(2) {
+        float: left;
+        height: 50px;
+        width: 60%;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div></div>
+      <div></div>
+    </section>
+  </body>
+</html>

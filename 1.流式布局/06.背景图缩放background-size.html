@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 86.5px;
+        height: 58.5px;
+        border: 1px solid orange;
+        background: url("../images/ruan.jpg") no-repeat;
+        /* background-size：x y;用于设置背景图的大小，x表示宽度，y表示高度。 */
+        /* background-size: 40px 60px; */
+
+        /* 只写一个参数，则表示宽度固定，高度自适应 */
+        /* background-size: 80px; */
+
+        /* 百分比相对的是盒子的宽高 */
+        /* background-size: 50% 100%; */
+        background-size: 100%;
+
+        /* cover表示将背景图片等比例缩放，直到‘覆盖整个盒子’。最后可能图片显示不全 */
+        /* background-size: cover; */
+
+        /* contain表示将背景图片等比例缩放，直到‘背景图片的宽或高铺满盒子’，最后可能会有空白区域 */
+        /* background-size: contain; */
+      }
+      /* 背景图片的2倍图：
+        为了不让背景图模糊，也需要采用2倍图的方式对原图片的尺寸进行处理，即原背景图片应该比实际显示的大两倍
+       */
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

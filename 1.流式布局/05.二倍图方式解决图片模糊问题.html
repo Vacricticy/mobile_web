@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 
+      以iphone8举例，由于存在2倍的物理像素比的情况，
+        若原图片设计稿大小和宽高为50px*50px，‘即水平和垂直方向都有50个像素点存在颜色’，则在放大后会变成100像素*100像素，图片会存在模糊的现象。
+        此时若在设计时把图片换成100px*100px,‘即水平和垂直方向都有100个像素点存在颜色’，则在将图片宽高设置为50px*50px后，放大后仍会变成100像素*100像素，此时的图片就不会存在模糊的情况 
+        
+      理解的核心：图片像素大小为50px*50px,表示的是水平和垂直方向都有50个像素点存在颜色。
+    -->
+    <style>
+      img:nth-child(2) {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="50px*50px.png" alt="" />
+    <img src="100px*100px.png" alt="" />
+  </body>
+</html>
