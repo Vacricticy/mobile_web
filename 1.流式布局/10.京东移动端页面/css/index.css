@@ -7,4 +7,129 @@ body {
   font-family: -apple-system, Helvetica sans-serif;
   color: #666;
   line-height: 1.5;
+
+  background-color: #666;
+}
+.header {
+  height: 45px;
+  background-color: #313231;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  /* line-height: 45px; */
+}
+.header ul li {
+  float: left;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+}
+.header ul li:nth-child(1) {
+  width: 8%;
+}
+.header ul li:nth-child(1) img {
+  width: 15px;
+  vertical-align: middle;
+}
+.header ul li:nth-child(2) {
+  width: 10%;
+}
+.header ul li:nth-child(2) img {
+  width: 40px;
+  vertical-align: middle;
+}
+.header ul li:nth-child(3) {
+  width: 57%;
+}
+.header ul li:nth-child(4) {
+  width: 25%;
+  background-color: #ff4410;
+}
+.search-wrap {
+  position: relative;
+  /* position: fixed; */
+  width: 100%;
+  height: 44px;
+  /* 清除浮动 */
+  overflow: hidden;
+}
+.search-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 44px;
+}
+.search-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 18px;
+  background: url(../images/search-btn.png) no-repeat;
+  background-size: 20px 18px;
+  margin: 13px 0 0 10px;
+}
+.search-login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 44px;
+  color: #fff;
+  text-align: center;
+  line-height: 44px;
+}
+.search {
+  width: 100%;
+  height: 30px;
+  margin: 0 50px;
+  margin-top: 7px;
+  background-color: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+}
+.search .jd-icon {
+  position: relative;
+  width: 20px;
+  height: 15px;
+  background: url(../images/jd-icon.png) no-repeat;
+  background-size: 20px 15px;
+  margin: 7px 0 0 12px;
+}
+.search .jd-icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -8px;
+  height: 16px;
+  border-right: 1px solid #ddd;
+}
+.search .glass {
+  width: 18px;
+  height: 15px;
+  position: absolute;
+  top: 15px;
+  left: 97px;
+  background: url("../images/jd-sprites.png") no-repeat -80px 0;
+  /* 精灵图缩放的实现，先将整个精灵图缩小，然后对想要使用的图片重新进行测量位置 */
+  background-size: 200px;
+}
+.slider img {
+  width: 100%;
+}
+.brand {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+.brand > div {
+  float: left;
+  width: 33.33%;
+}
+.brand > div img {
+  width: 100%;
 }
