@@ -1,0 +1,44 @@
+// 使用vscode的easy less插件将less文件自动编译成css文件
+// 1.less-变量
+@darktheme: rgb(63, 72, 80);
+@font50: 50px;
+@basefont: 20px;
+html {
+  font-size: @basefont;
+}
+body {
+  background-color: @darktheme;
+}
+.box1 {
+  font-size: @font50;
+}
+.box2 {
+  a {
+    color: #fff;
+    // 2.less-嵌套：若有伪类，交集选择器，伪元素选择器，则需要在最前面加&
+    &:hover {
+      color: red;
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+  }
+}
+.box3 {
+  // 3.less-计算
+  span {
+    font-size: 10px * 5;
+  }
+  // 已知图片的宽度为172px，为了将宽度改为rem以实现后面的媒体查询效果，需要计算得出rem的值。
+  // 注意：若在乘除的表达式中两边的单位不一致，则会以左边的为准
+  img {
+    width: 172rem / @basefont;
+    // 以下写法都是错误的：
+    // width: 172 / 10 rem;
+    // width: 172 / @basefont rem;
+  }
+}

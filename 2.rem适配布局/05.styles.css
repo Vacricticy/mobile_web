@@ -1,0 +1,28 @@
+html {
+  font-size: 20px;
+}
+body {
+  background-color: #3f4850;
+}
+.box1 {
+  font-size: 50px;
+}
+.box2 a {
+  color: #fff;
+}
+.box2 a:hover {
+  color: red;
+}
+.box2::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+.box3 span {
+  font-size: 50px;
+}
+.box3 img {
+  width: 8.6rem;
+}

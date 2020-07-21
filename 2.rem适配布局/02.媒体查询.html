@@ -4,13 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- 媒体查询@media 可以针对不同的屏幕尺寸设置不同的样式 
-        @media mediatype 
+    <!-- 媒体查询@media 可以根据不同的屏幕尺寸设置不同的样式 
+
+        @media mediatype 关键字 媒体特性
 
         mediatype表示媒体类型，即不同的终端设备。
+            all表示所有设备。
+            print表示打印机。
+            screen表示屏幕。
+        关键字
+            and用于连接多个媒体特性
+            not only用于某个媒体类型
+        媒体特性,需要用小括号包起来
+            width
+            min-width
+            max-width
     -->
     <style>
-      @media all;
+      /* 当屏幕的宽度在801px以上时，应用以下样式： */
+      @media screen and (min-width: 801px) {
+        body {
+          transition: all 2s;
+          background-color: orange;
+        }
+      }
+      /* 当屏幕的宽度在800px以内时，应用以下样式： */
+      @media screen and (max-width: 800px) {
+        body {
+          transition: all 2s;
+          background-color: red;
+        }
+      }
+      /* 当屏幕的宽度在600px以内时，应用以下样式： */
+      /* 一定要注意上下两种情况的顺序 */
+      @media screen and (max-width: 600px) {
+        body {
+          transition: all 2s;
+          background-color: yellow;
+        }
+      }
+
+      /* 媒体查询一般按照从小到大或从大到小的顺序来写 */
     </style>
   </head>
   <body></body>
