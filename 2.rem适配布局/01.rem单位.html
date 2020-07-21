@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        font-size: 50px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        /* font-size: 30px; */
+      }
+      .box1 {
+        /* font-size: 20px; */
+        width: 8rem;
+        height: 8rem;
+        background-color: red;
+      }
+      .box1 p {
+        /* font-size: 40px; */
+        /* 1.em单位相对的基准点是父元素字体的大小，如果自身定义了字体的大小，则会按照自身的来算 */
+        /* width: 2em;
+        height: 2em; */
+
+        /* 2.rem单位相对的是<html>标签字体的大小 */
+        /* 通过设置html标签元素的大小，然后将所有元素的大小单位都设置为rem,可以实现整个页面里面元素的大小跟随页面的大小而变化。 */
+        width: 5rem;
+        height: 5rem;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>
