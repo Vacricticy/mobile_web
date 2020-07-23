@@ -1,0 +1,118 @@
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 75px !important;
+  }
+}
+body {
+  min-width: 320px;
+  /* 由于PC端超过了750px，且10rem表示的是整个屏幕的宽度，所以这里不能设置为10rem */
+  // width: 10rem;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: Arial, Helvetica;
+  background: #f2f2f2;
+}
+.search-content {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+  height: 1.173333rem;
+  background-color: #ffdb47;
+  .classify {
+    width: 0.48rem;
+    height: 0.8rem;
+    margin: 0.146667rem 0.333333rem 0.093333rem 0.32rem;
+    background: url(../images/classify.png) no-repeat;
+    background-size: 0.48rem 0.8rem;
+  }
+  .search {
+    position: relative;
+    flex: 1;
+    input {
+      outline: none;
+      border: 0;
+      width: 100%;
+      height: 0.853333rem;
+      border-radius: 0.426667rem;
+      margin-top: 0.16rem;
+      font-size: 0.333333rem;
+      color: #757575;
+      padding-left: 1.026667rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 30%;
+      left: 4%;
+      width: 0.48rem;
+      height: 0.48rem;
+      background: url(../images/search-icon.png) no-repeat;
+      background-size: 0.48rem 0.48rem;
+    }
+  }
+  .login {
+    width: 0.48rem;
+    height: 0.8rem;
+    margin: 0.146667rem 0.333333rem 0.093333rem 0.32rem;
+    background: url(../images/login.png) no-repeat;
+    background-size: 0.48rem 0.8rem;
+  }
+}
+
+.banner {
+  width: 10rem;
+  height: 3.466667rem;
+  background: url(../uploads/banner.png) no-repeat;
+  background-size: 10rem 3.466667rem;
+  margin-top: 1.173333rem;
+  .banner-img {
+    width: 9.36rem;
+    height: 3.2rem;
+    background-color: red;
+    margin: 0 auto;
+    border-radius: 0.266667rem;
+    overflow: hidden;
+    background: url(../uploads/banner-img1.jpg) no-repeat bottom;
+    background-size: 9.36rem;
+  }
+}
+.ad {
+  display: flex;
+  height: 3.12rem;
+  a:nth-child(1) {
+    flex-basis: 50%;
+    margin-right: 0.013333rem;
+  }
+  a:nth-child(2) {
+    flex-basis: 25%;
+    margin-right: 0.013333rem;
+  }
+  a:nth-child(3) {
+    flex-basis: 25%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+nav {
+  width: 10rem;
+  a {
+    float: left;
+    width: 2rem;
+    height: 1.893333rem;
+    text-align: center;
+    img {
+      display: block;
+      width: 1.12rem;
+      height: 1.12rem;
+      margin: 0.133333rem auto 0;
+    }
+    font-size: 0.333333rem;
+    color: #666666;
+  }
+}
