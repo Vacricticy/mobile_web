@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 响应式的原理就是通过媒体查询根据屏幕的尺寸改变容器的大小 
+        以此适配手机端，ipad端以及PC端的开发。
+      */
+      .container {
+        background-color: orange;
+        height: 50px;
+        margin: 0 auto;
+      }
+      @media screen and (max-width: 767px) {
+        .container {
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .container {
+          width: 970px;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .container {
+          width: 1170px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>

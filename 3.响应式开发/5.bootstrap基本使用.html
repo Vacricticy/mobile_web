@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap 101 Template</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        margin-bottom: 20px;
+      }
+
+      [class^="col"] {
+        border: 1px solid black;
+      }
+
+      .box3 > div {
+        background-color: yellow;
+      }
+      .box5 > div {
+        background-color: skyblue;
+      }
+      .box6 > div {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1.布局容器：bootstrap必须为页面内容和栅格系统包裹一个container容器 -->
+
+    <!-- container类适用于响应式开发，用于创建响应式容器，已经内部设置好了媒体查询下的响应式宽度 -->
+    <div class="container">123</div>
+    <!-- container-fluid类适用于单独做移动端的开发，用于创建流式布局的容器，整个容器占满整个可视区的宽度。 -->
+    <div class="container-fluid">123</div>
+
+    <!-- 2.栅格系统 -->
+    <div class="container">
+      <!-- 整个栅格系统分为12列 -->
+      <div class="row">
+        <div class="col-lg-3">1</div>
+        <div class="col-lg-3">2</div>
+        <div class="col-lg-3">3</div>
+        <div class="col-lg-36">4</div>
+      </div>
+
+      <!-- 列数不足12列，则剩余部分为空白 -->
+      <div class="row">
+        <div class="col-lg-3">1</div>
+        <div class="col-lg-3">2</div>
+        <div class="col-lg-3">3</div>
+        <div class="col-lg-1">4</div>
+      </div>
+
+      <!-- 列数超过12列，则超出的列另起一行显示 -->
+      <div class="row">
+        <div class="col-lg-3">1</div>
+        <div class="col-lg-3">2</div>
+        <div class="col-lg-3">3</div>
+        <div class="col-lg-4">4</div>
+      </div>
+    </div>
+
+    <!-- 3.利用栅格系统实现响应式： -->
+    <div class="container">
+      <div class="row box3">
+        <!-- 
+        超小屏幕：col-xs-  extra small
+        小屏幕  col-sm-  small
+        中等屏幕 col-md  middle
+        大屏幕 col-lg  large
+
+        注意：单独使用的话表示处于当前屏幕以及大于当前屏幕时，栅格对应的列数。
+        比如：如果只有一个col-md-3,则表示在中等屏幕和大屏幕下，该元素的列数都是3列。
+      -->
+        <div class="col-lg-3 col-md-4 col-sm-6">响应式1</div>
+        <div class="col-lg-3 col-md-4 col-sm-6">响应式2</div>
+        <div class="col-lg-3 col-md-4 col-sm-6">响应式3</div>
+        <div class="col-lg-3 col-md-4 col-sm-6">响应式4</div>
+      </div>
+    </div>
+
+    <!-- 4.栅格系统列嵌套 -->
+    <div class="container">
+      <div class="row box4">
+        <div class="col-md-4">
+          <!-- 列里面嵌套列最好加上一个row -->
+          <div class="row">
+            <div class="col-md-6">子元素1</div>
+            <div class="col-md-6">子元素2</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">2</div>
+
+        <div class="col-md-4">3</div>
+      </div>
+    </div>
+
+    <!-- 5.栅格系统列偏移 -->
+    <div class="container">
+      <!-- 左右对齐 -->
+      <div class="row box5">
+        <div class="col-md-4">左边</div>
+        <div class="col-md-4 col-md-offset-4">右边</div>
+      </div>
+
+      <!-- 中间对齐 -->
+      <div class="row box5">
+        <!-- col-md-offset-x用于将该元素向右偏移x个列 -->
+        <div class="col-md-8 col-md-offset-2">中间</div>
+      </div>
+    </div>
+
+    <!-- 6.栅格系统排序 -->
+    <div class="container">
+      <div class="row box6">
+        <!-- 人站在左边，pull表示拉，push表示推 -->
+        <!-- 
+          col-md-pull-4表示向左拉过来4个列的距离
+          col-md-push-4表示向右推过去4个列的距离 
+        -->
+        <div class="col-md-4 col-md-push-8">左边</div>
+        <div class="col-md-8 col-md-pull-4">右边</div>
+      </div>
+    </div>
+
+    <!-- 
+      7.响应式工具：针对不同设备隐藏和显示某些内容
+    
+      .hidden-xs 超小屏幕下会隐藏，其他屏幕不隐藏
+      .hidden-sm 小屏幕下会隐藏
+      .hidden-md 中等屏幕下会隐藏
+      .hidden-lg 大屏幕下会隐藏
+
+      .visible-xs 系列与上述相反，表示在对应屏幕下才会显示
+    -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-3">1</div>
+        <div class="col-xs-3">2</div>
+        <div class="col-xs-3 visible-lg">大屏幕才显示</div>
+        <div class="col-xs-3">4</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+/* 如果设计稿给的宽度为1280px，而container默认最大的值为1170px，为了使屏幕宽度大于1280px时能够显示完整，可以通过媒体查询重置container的宽度 */
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+}
