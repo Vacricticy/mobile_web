@@ -3,9 +3,9 @@
 ## flex 弹性布局原理
 
 - 父盒子设置为 flex 布局后，子元素的浮动 float,clear,vertical-align 将失效。
+- 父元素设置为 flex 布局后，子元素没有行内元素和块元素之分，都可以设置宽高。
 - flex 容器与项目：父元素指定为 flex 布局，则父元素被称为容器，其子元素被称为项目。
-- 父元素设置为 flex 布局后，子元素没有行内元素和块元素之分。
-- 主轴与侧轴：当 flex-direction 的方向改变以后，即主轴方向改为垂直方向时，侧轴方向将会变成水平方向。
+- 主轴与侧轴：当 flex-direction 的方向改变以后，比如主轴方向改为垂直方向时，侧轴方向将会变成水平方向。
 
 ## 一.容器的六大属性
 
@@ -37,11 +37,11 @@
 - flex-end 自下而上
 - center 居中对齐
 - stretch（默认值） 使用该属性时，子项目不能设置高度，或者可以设置为 auto，此时子元素将占满整个容器的高度。
-- （了解）aseline 项目的第一行文字的基线对齐
+- （了解）baseline 每个项目以文字的基线 baseline 对齐
 
 ### 5.align-content ‘多行’项目在侧轴的对齐方式
 
-- 注意：单行的项目使用 align-content 是无效的，只能使用 align-items
+- 注意：单行的项目使用 align-content 是无效的，只能使用 align-items。多行是指存在换行的现象。
 - flex-start 自上而下
 - flex-end 自下而上
 - center 居中对齐

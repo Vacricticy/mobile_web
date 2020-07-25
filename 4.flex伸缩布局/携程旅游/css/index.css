@@ -5,8 +5,20 @@ body {
   background-color: #f2f2f2;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
+  height: 3000px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
 }
 .search-box {
+  display: flex;
   position: fixed;
   top: 0;
   left: 50%;
@@ -15,5 +27,182 @@ body {
   height: 44px;
   min-width: 320px;
   max-width: 540px;
+  background-color: #fff;
+}
+
+.search {
+  flex: 1;
+}
+.user {
+  width: 54px;
+  /* background-color: tomato; */
+  color: black;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+}
+.user::before {
+  display: block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: url(../images/user.png) no-repeat -0.5px -78.5px;
+  background-size: 21px auto;
+  margin: 5px auto 0;
+}
+.search {
+  position: relative;
+  height: 28px;
+  margin: 8px 6px 8px 12px;
+  background-color: #ececed;
+  border-radius: 14px;
+  line-height: 28px;
+  font-size: 16px;
+  color: #757575;
+  padding-left: 32px;
+}
+.search::before {
+  position: absolute;
+  left: 0;
+  display: block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: url(../images/user.png) no-repeat -0.5px -0.5px;
+  background-size: 21px auto;
+  margin: 7px 10px 12px;
+}
+.focus {
+  height: 300px;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+  margin-top: -30px;
+}
+.focus img {
+  width: 100%;
+}
+.local-nav {
+  display: flex;
+  position: relative;
+  height: 64px;
+  margin: 0 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: -30px;
+  /* z-index: 999; */
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+}
+.local-nav li {
+  flex: 1;
+  font-size: 12px;
+  color: #222;
+}
+.local-nav li a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-bottom: 6px;
+}
+.local-nav li:nth-child(1) .local-nav-img {
+  background: url("../images/local-nav.png") no-repeat -7px -7px;
+  background-size: 40px 200px;
+  width: 26px;
+  height: 29px;
+  margin-top: 10px;
+}
+.local-nav li:nth-child(2) .local-nav-img {
+  background: url("../images/local-nav.png") no-repeat -2px -48px;
+  background-size: 40px 200px;
+  width: 35px;
+  height: 27px;
+  margin-top: 10px;
+}
+.local-nav li:nth-child(3) .local-nav-img {
+  background: url("../images/local-nav.png") no-repeat -3px -85px;
+  background-size: 40px 200px;
+  width: 33px;
+  height: 33px;
+  margin-top: 10px;
+}
+.local-nav li:nth-child(4) .local-nav-img {
+  background: url("../images/local-nav.png") no-repeat -3px -128px;
+  background-size: 40px 200px;
+  width: 34px;
+  height: 28px;
+  margin-top: 10px;
+}
+.local-nav li:nth-child(5) .local-nav-img {
+  background: url("../images/local-nav.png") no-repeat -3px -164px;
+  background-size: 40px 200px;
+  width: 33px;
+  height: 36px;
+  margin-top: 10px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  height: 196px;
+  margin: 0 10px;
+  border-radius: 10px;
+  margin-top: 10px;
   background-color: orange;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+}
+.nav [class^="nav-common"] {
+  flex: 1;
+  line-height: 65px;
+  /* box-sizing: border-box; */
+}
+.nav-common2:nth-child(2) {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.nav-common1 {
+  display: flex;
+}
+.nav-common1 .nav-items:nth-child(1) {
+  flex: 0 1 31%;
+  border-right: 1px solid #fff;
+}
+.nav-common1 .nav-items:nth-child(2) {
+  flex: 0 1 23%;
+  border-right: 1px solid #fff;
+}
+.nav-common1 .nav-items:nth-child(3) {
+  flex: 0 1 46%;
+}
+.nav-common2 {
+  display: flex;
+}
+.nav-common2 .nav-items:nth-child(-n + 3) {
+  border-right: 1px solid #fff;
+}
+.nav-common2 .nav-items:nth-child(1) {
+  flex: 0 1 31%;
+}
+.nav-common2 .nav-items:nth-child(n + 2) {
+  flex: 1;
+}
+.nav .nav-common2:nth-child(2) {
+  background-color: #4fa5ed;
+}
+.nav .nav-common2:nth-child(3) {
+  background-color: #50cc81;
+}
+.nav-common1 .nav-items:nth-child(-n + 2) {
+  background-color: #fa7a51;
+}
+.nav-common1 .nav-items:nth-child(3) {
+  background-color: #ffc04b;
+}
+.nav-common1 .nav-items:nth-child(1) {
+  background: url(../images/hotal1.png) no-repeat right bottom;
+  background-size: 120px auto;
 }
