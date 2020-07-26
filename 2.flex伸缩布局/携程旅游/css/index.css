@@ -5,7 +5,7 @@ body {
   background-color: #f2f2f2;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
-  height: 3000px;
+  /* height: 3000px; */
 }
 * {
   margin: 0;
@@ -16,6 +16,7 @@ li {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 .search-box {
   display: flex;
@@ -28,6 +29,7 @@ a {
   min-width: 320px;
   max-width: 540px;
   background-color: #fff;
+  z-index: 999;
 }
 
 .search {
@@ -73,10 +75,10 @@ a {
   margin: 7px 10px 12px;
 }
 .focus {
-  height: 300px;
+  height: 250px;
   border-radius: 0 0 30px 30px;
   overflow: hidden;
-  margin-top: -30px;
+  margin-top: -20px;
 }
 .focus img {
   width: 100%;
@@ -149,11 +151,14 @@ a {
   margin: 0 10px;
   border-radius: 10px;
   margin-top: 10px;
-  background-color: orange;
+  /* background-color: orange; */
   color: #fff;
   font-size: 14px;
   text-align: center;
   overflow: hidden;
+}
+.nav a {
+  color: #fff;
 }
 .nav [class^="nav-common"] {
   flex: 1;
@@ -176,7 +181,7 @@ a {
   border-right: 1px solid #fff;
 }
 .nav-common1 .nav-items:nth-child(3) {
-  flex: 0 1 46%;
+  flex: 1;
 }
 .nav-common2 {
   display: flex;
@@ -190,19 +195,114 @@ a {
 .nav-common2 .nav-items:nth-child(n + 2) {
   flex: 1;
 }
-.nav .nav-common2:nth-child(2) {
-  background-color: #4fa5ed;
-}
-.nav .nav-common2:nth-child(3) {
-  background-color: #50cc81;
-}
-.nav-common1 .nav-items:nth-child(-n + 2) {
-  background-color: #fa7a51;
-}
-.nav-common1 .nav-items:nth-child(3) {
-  background-color: #ffc04b;
-}
+
 .nav-common1 .nav-items:nth-child(1) {
   background: url(../images/hotal1.png) no-repeat right bottom;
-  background-size: 120px auto;
+  background-size: 74px auto;
+  text-align: left;
+  padding-left: 12px;
+}
+.nav-common1 .nav-items:nth-child(2) {
+  background: url(../images/hotal2.png) no-repeat left bottom;
+  background-size: 37px auto;
+}
+.nav-common1 .nav-items:nth-child(3) {
+  background: url(../images/price.png) no-repeat left bottom,
+    -webkit-linear-gradient(left, #ffbc49, #ffd252);
+  background-size: 241.5px auto;
+}
+.nav-common2:nth-child(2) .nav-items:nth-child(1) {
+  background: url(../images/air1.png) no-repeat right bottom;
+  background-size: 79.5px auto;
+  text-align: left;
+  padding-left: 12px;
+}
+.nav-common2:nth-child(2) .nav-items:nth-child(2) {
+  background: url(../images/air2.png) no-repeat left bottom;
+  background-size: 37px auto;
+}
+.nav-common2:nth-child(3) .nav-items:nth-child(1) {
+  background: url(../images/travel1.png) no-repeat right bottom;
+  background-size: 93.5px auto;
+  text-align: left;
+  padding-left: 12px;
+}
+.nav-common2:nth-child(3) .nav-items:nth-child(2) {
+  background: url(../images/travel2.png) no-repeat left bottom;
+  background-size: 61px auto;
+}
+
+/* 设置渐变的背景色： */
+.nav-common1 {
+  background: linear-gradient(to right, #fa5956, #fb8650 54%);
+}
+.nav-common1 .nav-items:nth-child(3) span {
+  /* background: url(../images/price.png) no-repeat left bottom;
+  background-size: 241.5px auto; */
+  /* background: -webkit-linear-gradient(left, #ffbc49, #ffd252); */
+}
+.nav-common2:nth-child(2) {
+  background: -webkit-linear-gradient(left, #4b8fed, #53bced);
+}
+.nav-common2:nth-child(3) {
+  background: -webkit-linear-gradient(left, #35c2aa, #6bd557);
+}
+.activity {
+  height: 160px;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.activity-head {
+  position: relative;
+  height: 44px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.activity-head h3 {
+  position: absolute;
+  text-indent: -999px;
+  overflow: hidden;
+  font-size: 0px;
+}
+.activity-head h3::before {
+  display: block;
+  content: "";
+  background: url("../images/activity.png") no-repeat 0 -20px;
+  background-size: 79px 58px;
+  width: 73px;
+  height: 15px;
+  margin: 16px 8px;
+}
+.activity-head a {
+  display: block;
+  position: absolute;
+  right: 0;
+  /* line-height: 44px; */
+  margin: 10px 8px;
+  background: linear-gradient(to right, #ff5065, #ff6eca);
+  padding: 4px 20px 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #fff;
+}
+.activity-head a::after {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  width: 7px;
+  height: 7px;
+  content: "";
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+.activity .ad {
+  display: flex;
+}
+.activity .ad a {
+  flex: 1;
+}
+.activity .ad a img {
+  width: 100%;
 }
