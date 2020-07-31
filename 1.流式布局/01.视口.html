@@ -8,8 +8,11 @@
         视口分为布局视口，视觉视口和理想视口。
 
         布局视口layout viewport：安卓苹果默认将视口分辨率设置为了980px，元素看上去很小，需要手动缩放页面。
+          布局视口可以通过document.documentElement.clientWidth来获取。
         视觉视口visual vieport:用于正在看到的网站的区域。可以通过缩放操作视觉视口，但不会影响布局视口原来的宽度。
-        理想视口ideal viewport:添加meta视口标签，手机屏幕有多宽，布局视口就有多宽。
+          视觉视口可以通过window.innerWidth来获取。
+        理想视口ideal viewport:添加meta视口标签，手机屏幕有多宽，布局视口就有多宽，用户不需要手动缩放网站。
+          理想视口可以通过window.screen.width来获取。
     -->
   </head>
   <body></body>
