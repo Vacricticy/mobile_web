@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        align-content: center;
+        flex-flow: row wrap;
+      }
+      span {
+        order: -1;
+        align-self: flex-end;
+        flex: flex-grow flex-shrink flex-basis;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        background: -webkit-linear-gradient(to right, #xxx, #xxx);
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

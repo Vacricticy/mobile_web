@@ -72,7 +72,7 @@ a {
   height: 14px;
   background: url(../images/user.png) no-repeat -0.5px -0.5px;
   background-size: 21px auto;
-  margin: 7px 10px 12px;
+  margin: 7px 10px 7px;
 }
 .focus {
   height: 250px;
