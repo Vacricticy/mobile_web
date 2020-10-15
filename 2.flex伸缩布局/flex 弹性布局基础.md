@@ -41,7 +41,8 @@
 
 ### 5.align-content ‘多行’项目在侧轴的对齐方式
 
-- 注意：单行的项目使用 align-content 是无效的，只能使用 align-items。多行是指存在换行的现象。
+- 多行是指存在换行的现象。
+- 注意：单行的项目使用 align-content 是无效的，多行的项目使用 align-items 是无效的。
 - flex-start 自上而下
 - flex-end 自下而上
 - center 居中对齐
@@ -49,7 +50,7 @@
 - space-around 平均分配剩余空间，每一行之间的间隔相等
 - （了解）stretch 占满整个侧轴，自上而下平均分配空间。（默认值）
 
-### 4.flex-flow 复合写法
+### 6.flex-flow 复合写法
 
 - flex-direction 与 flex-wrap 的结合
 
